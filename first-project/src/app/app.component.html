@@ -65,3 +65,36 @@ Text: <input type="text" name="input" #box>
 <ul>
     <li *ngFor="let player of players">{{player}}</li>
 </ul>
+
+<!-- ngfor to print array of objects -->
+
+<table style="border:1px;">
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Run</th>
+    </tr>
+    <tr *ngFor="let player of batsman">
+        <td>{{player.name}}</td>
+        <td>{{player.country}}</td>
+        <td>{{player.runs}}</td>
+      </tr>
+</table>
+<h1>Score Details</h1>
+<table style="border:1px;">
+    <tr>
+      <th>Name</th>
+      <th>Matches</th>
+      <th>Last 5 match Scores</th>
+    </tr>
+    <tr *ngFor="let score of scoreDetails">
+        <td>{{score.name}}</td>
+        <td>{{score.matchs}}</td>
+        <!--<td>{{score.lastFiveScore}}</td> -->
+        <td *ngFor="let last5score of score.lastFiveScore">{{last5score}}</td>
+      </tr>
+</table>
+<!-- Toogle Color -->
+
+<div [style.color]="fontColor"[style.backgroundColor]="bgColor">Hello World</div>
+<button (click)="toogleColor()">Toogle Color</button>
