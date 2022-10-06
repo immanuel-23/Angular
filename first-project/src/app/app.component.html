@@ -98,3 +98,13 @@ Text: <input type="text" name="input" #box>
 
 <div [style.color]="fontColor"[style.backgroundColor]="bgColor">Hello World</div>
 <button (click)="toogleColor()">Toogle Color</button>
+
+
+<!-- Todo List -->
+<br><br>
+Input Text:<input type="text" #todo>
+<button (click)="insertValue(todo.value)">Submit</button>
+<div *ngFor="let message of todoList">
+    {{message.id}}
+
+</div>

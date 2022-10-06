@@ -53,6 +53,17 @@ export class AppComponent {
     this.bgColor='yellow';
     }
   }
+  
+  idtodo:number=0;
+  todoList:object[]=[];
+
+  insertValue(todo:string){
+    this.idtodo=this.idtodo+1;
+    this.todoList.push({id:this.idtodo,message:todo})
+  };
 
 }
+
+
+
 // this is a class file
