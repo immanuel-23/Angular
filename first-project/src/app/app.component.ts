@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { bufferToggle } from 'rxjs';
 
 @Component({
   selector: 'app-imm',
@@ -6,12 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'first-project';
   apple='red';
   displayText='';
+  color:string='red'
   getValue(box:string){
     this.displayText=box;
   }
-  
+  isDisabled=false;
+  disableInput(){
+    if(this.isDisabled){
+      this.isDisabled=false;
+    }else{
+      this.isDisabled=true;
+    }
+  }
+  show:boolean=true;
+
+
 }
 // this is a class file

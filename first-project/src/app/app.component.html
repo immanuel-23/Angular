@@ -1,7 +1,50 @@
 <h1>Hey Angular this is my fist  project {{title}}</h1>
-<h2>Color of apple is : {{apple}}</h2>
+
+<!-- <h2>Color of apple is : {{apple}}</h2>
 Text: <input type="text" name="input" #box>
 
 <h2>Text is :{{displayText}}</h2>
 
-<button (click)="getValue(box.value)">Submit</button>
+<button (click)="getValue(box.value)">Submit</button> -->
+
+<!-- Property -->
+<!-- Input: <input type="text" name="property"[disabled] = isDisabled>
+<br>
+<button (click)="disableInput()">Submit</button> -->
+<!-- Property -->
+
+<!-- Angular Condition Directives -->
+
+<!-- <div *ngIf="show, else Block">
+    Conntent To be Displayed inside True
+</div>
+<ng-template #Block>
+    Hey Angular this is elseBlock
+</ng-template>
+<br> -->
+
+
+<div *ngIf="show,then trueBlock else falseBlock"></div>
+
+<ng-template #trueBlock>
+    <h2>    Hey Angular this is tureBlock    </h2>
+    <input type="text"> 
+</ng-template>
+
+<ng-template #falseBlock>
+    <h2> Hey Angular this is falseBlock</h2>
+</ng-template>
+
+<hr>
+
+<ng-template [ngIf]="color==='blue'">
+    <h1 style="color: blue;">Blue</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='green'">
+    <h1 style="color:green;">Green</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='red'">
+     <h1 style="color: red;">Red</h1>
+</ng-template>
