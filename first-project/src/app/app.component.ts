@@ -24,6 +24,7 @@ export class AppComponent {
     }
   }
   show:boolean=true;
+  players=["immanuel","Virat","Sachin","rahul"]
 
 
 }
