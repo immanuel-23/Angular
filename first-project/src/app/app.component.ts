@@ -53,14 +53,25 @@ export class AppComponent {
     this.bgColor='yellow';
     }
   }
+ studentEntries = new Set();  
+
   
   idtodo:number=0;
-  todoList:object[]=[];
+  todoList:any[]= [];
+  
 
   insertValue(todo:string){
     this.idtodo=this.idtodo+1;
-    this.todoList.push({id:this.idtodo,message:todo})
+    this.todoList.push({id:this.idtodo,"message":todo})
+    
   };
+
+  deleteMessage(id:number){
+    console.log(id);
+    this.todoList=this.todoList.filter(n=>n.id!==id);
+    
+  }
+  
 
 }
 

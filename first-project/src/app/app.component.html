@@ -88,6 +88,7 @@ Text: <input type="text" name="input" #box>
       <th>Last 5 match Scores</th>
     </tr>
     <tr *ngFor="let score of scoreDetails">
+        {{score}}
         <td>{{score.name}}</td>
         <td>{{score.matchs}}</td>
         <!--<td>{{score.lastFiveScore}}</td> -->
@@ -104,7 +105,8 @@ Text: <input type="text" name="input" #box>
 <br><br>
 Input Text:<input type="text" #todo>
 <button (click)="insertValue(todo.value)">Submit</button>
-<div *ngFor="let message of todoList">
-    {{message.id}}
+<ul *ngFor="let message of todoList">
+    <li>    {{message.message}} <button (click)="deleteMessage(message.id)">Delete</button></li>
+</ul>
 
-</div>
+
