@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'first-project';
   apple='red';
   displayText='';
-  color:string='green'
+  color:string='red'
   getValue(box:string){
     this.displayText=box;
   }

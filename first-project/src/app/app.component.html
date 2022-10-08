@@ -8,9 +8,10 @@ Text: <input type="text" name="input" #box>
 <button (click)="getValue(box.value)">Submit</button>
 
 <!-- Property -->
-<!-- Input: <input type="text" name="property"[disabled] = isDisabled>
-<br>
-<button (click)="disableInput()">Submit</button> -->
+<br><br>
+Input: <input type="text" name="property"[disabled] = isDisabled>
+
+<button (click)="disableInput()">Submit</button>
 <!-- Property -->
 
 <!-- Angular Condition Directives -->
@@ -88,10 +89,8 @@ Text: <input type="text" name="input" #box>
       <th>Last 5 match Scores</th>
     </tr>
     <tr *ngFor="let score of scoreDetails">
-        {{score}}
         <td>{{score.name}}</td>
         <td>{{score.matchs}}</td>
-        <!--<td>{{score.lastFiveScore}}</td> -->
         <td *ngFor="let last5score of score.lastFiveScore">{{last5score}}</td>
       </tr>
 </table>

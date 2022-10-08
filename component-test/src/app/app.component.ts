@@ -7,8 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'component-test';
-  i=0;
-  increment(){
-    this.i++;
-  }
+ i:number=100;
+ items=['1','2','3','4'];
+ x:any;
+ text:any;
+ fontSize:number=16;
+ addItem(item:any){
+  this.items.push(item)
+ }
+ displayItems(item:any){
+  this.x=item;
+ }
+ displayText(item:any){
+  this.text=item
+ }
+
 }
