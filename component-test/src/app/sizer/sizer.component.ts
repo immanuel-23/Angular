@@ -14,11 +14,13 @@ export class SizerComponent implements OnInit {
   ngOnInit(): void {
   }
   increment(){
-    this.sizeChange.emit(this.size+1);
+    if(this.size<30){
+      this.sizeChange.emit(this.size+1);
+    }
 
   }
   decrement(){
-    if(this.size>0){
+    if(this.size>10){
       this.sizeChange.emit(this.size-1);
 
     }

@@ -7,13 +7,15 @@ import { ChildComponent } from './child/child.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Child2Component } from './child2/child2.component';
 import { SizerComponent } from './sizer/sizer.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
     Child2Component,
-    SizerComponent
+    SizerComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
