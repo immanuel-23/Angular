@@ -47,6 +47,12 @@
     <p [style.font-size.px]="fontSize">Immanuel</p>    
     <br>
     <app-pipes></app-pipes>
+    <app-custom-pipes></app-custom-pipes>
+    <h1> 100 Dollar to INR {{100|inrDollar|currency:"INR"}}</h1>
+    <p>{{"India is my country "| stringWords:2}}</p>
+    <p>Feet to Inches {{10|feetInches}}</p>
+
+
 
 </div>
 

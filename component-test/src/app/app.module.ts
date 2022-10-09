@@ -8,6 +8,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Child2Component } from './child2/child2.component';
 import { SizerComponent } from './sizer/sizer.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
+import { InrDollarPipe } from './inr-dollar.pipe';
+import { StringWordsPipe } from './string-words.pipe';
+import { FeetInchesPipe } from './feet-inches.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { PipesComponent } from './pipes/pipes.component';
     ChildComponent,
     Child2Component,
     SizerComponent,
-    PipesComponent
+    PipesComponent,
+    CustomPipesComponent,
+    InrDollarPipe,
+    StringWordsPipe,
+    FeetInchesPipe
   ],
   imports: [
     BrowserModule,
